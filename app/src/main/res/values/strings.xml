@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ACSApp</string>
+    <string name="imoveis_cadastrados_count">%d imóveis cadastrados</string>
+    <string name="adicionar_logradouro">Adicionar Logradouro</string>
+</resources>
