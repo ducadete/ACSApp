@@ -64,4 +64,13 @@ dependencies {
 
     implementation ("com.google.android.material:material:1.12.0")
 
+    // --- ADICIONE ESTAS LINHAS PARA O ROOM ---
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+
+    // --- DEPENDÊNCIAS PARA VIEWMODEL E LIVEDATA ---
+    implementation("androidx.lifecycle:lifecycle-viewmodel:2.8.4")
+    implementation("androidx.lifecycle:lifecycle-livedata:2.8.4")
 }

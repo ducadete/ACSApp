@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cidadao.CadastroCidadaoStep5Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Condições de Saúde (5/6)"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Como você considera seu peso?" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_peso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/radio_peso_abaixo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Abaixo do peso"/>
+            <RadioButton android:id="@+id/radio_peso_adequado" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Peso adequado"/>
+            <RadioButton android:id="@+id/radio_peso_acima" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Acima do peso"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Possui doença respiratória?" />
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_doenca_respiratoria"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true">
+            <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_resp_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+            <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_resp_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Possui problemas nos rins?" />
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_rins"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true">
+            <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_rins_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+            <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_rins_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Possui doença cardíaca?" />
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_cardiaca"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true">
+            <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_cardiaca_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+            <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_cardiaca_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Teve internação nos últimos 12 meses?" />
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_internacao"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true">
+            <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_internacao_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+            <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_internacao_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_causa_internacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Causa da internação"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_causa_internacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

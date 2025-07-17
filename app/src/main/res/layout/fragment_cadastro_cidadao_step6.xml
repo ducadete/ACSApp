@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cidadao.CadastroCidadaoStep6Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Condições Gerais (6/6)"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
+
+            <LinearLayout android:orientation="vertical" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal">
+                <TextView android:text="É dependente de álcool?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_alcool">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_alcool_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_alcool_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="É dependente de outras drogas?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_drogas">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_drogas_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_drogas_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="Está acamado?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_acamado">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_acamado_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_acamado_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="Teve AVC/Derrame?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_avc">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_avc_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_avc_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="Tem/teve câncer?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_cancer">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_cancer_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_cancer_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="Tem diabetes?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_diabetes">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_diabetes_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_diabetes_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+
+            <LinearLayout android:orientation="vertical" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal">
+                <TextView android:text="Está domiciliado?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_domiciliado">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_domiciliado_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_domiciliado_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="É fumante?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_fumante">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_fumante_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_fumante_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="Tem hanseníase?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_hanseniase">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_hanseniase_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_hanseniase_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="Tem hipertensão arterial?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_hipertensao">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_hipertensao_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_hipertensao_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="Teve infarto?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_infarto">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_infarto_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_infarto_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView android:layout_marginTop="16dp" android:text="Usa práticas integrativas?"/>
+                <com.google.android.material.button.MaterialButtonToggleGroup app:singleSelection="true" android:id="@+id/toggle_praticas_integrativas">
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_praticas_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim"/>
+                    <Button style="?attr/materialButtonOutlinedStyle" android:id="@+id/btn_praticas_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>

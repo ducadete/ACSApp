@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_home" android:icon="@drawable/ic_logradouro"
+        android:id="@+id/logradouro"  android:icon="@drawable/ic_logradouro"
         android:title="Logradouro" />
+    <item
+        android:id="@+id/navigation_add_cidadao"
+        android:icon="@drawable/ic_person_add"
+        android:title="Cadastrar Cidadão" />
+
+    <item
+        android:id="@+id/navigation_cidadaos"
+        android:icon="@drawable/ic_cidadaos_list"
+        android:title="Cidadãos" />
 </menu>

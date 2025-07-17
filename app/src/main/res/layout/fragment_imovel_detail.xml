@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".imovel.ImovelDetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarImovelDetail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            tools:title="Detalhes do Imóvel" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/DetailSectionHeader" android:text="Endereço"/>
+            <TextView android:id="@+id/detail_tipo_imovel" style="@style/DetailItem" tools:text="Tipo: Domicílio"/>
+            <TextView android:id="@+id/detail_complemento" style="@style/DetailItem" tools:text="Complemento: Apto 101"/>
+            <TextView android:id="@+id/detail_ponto_referencia" style="@style/DetailItem" tools:text="Referência: Perto do mercado"/>
+
+            <TextView style="@style/DetailSectionHeader" android:text="Condições de Moradia"/>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <TextView style="@style/DetailLabel" android:text="Localização:"/>
+                <TextView android:id="@+id/detail_localizacao" style="@style/DetailValue" tools:text="Urbana"/>
+
+                <TextView style="@style/DetailLabel" android:text="Situação:"/>
+                <TextView android:id="@+id/detail_situacao" style="@style/DetailValue" tools:text="Próprio"/>
+
+                <TextView style="@style/DetailLabel" android:text="Tipo de Acesso:"/>
+                <TextView android:id="@+id/detail_tipo_acesso" style="@style/DetailValue" tools:text="Pavimento"/>
+
+                <TextView style="@style/DetailLabel" android:text="Tipo de Domicílio:"/>
+                <TextView android:id="@+id/detail_tipo_domicilio" style="@style/DetailValue" tools:text="Apartamento"/>
+
+                <TextView style="@style/DetailLabel" android:text="Material Paredes:"/>
+                <TextView android:id="@+id/detail_material" style="@style/DetailValue" tools:text="Alvenaria"/>
+
+                <TextView style="@style/DetailLabel" android:text="Nº de Cômodos:"/>
+                <TextView android:id="@+id/detail_comodos" style="@style/DetailValue" tools:text="5"/>
+            </GridLayout>
+
+            <TextView style="@style/DetailSectionHeader" android:text="Saneamento e Energia"/>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <TextView style="@style/DetailLabel" android:text="Abastecimento de Água:"/>
+                <TextView android:id="@+id/detail_abastecimento_agua" style="@style/DetailValue" tools:text="Rede encanada"/>
+
+                <TextView style="@style/DetailLabel" android:text="Água para Consumo:"/>
+                <TextView android:id="@+id/detail_agua_consumo" style="@style/DetailValue" tools:text="Filtrada"/>
+
+                <TextView style="@style/DetailLabel" android:text="Esgoto:"/>
+                <TextView android:id="@+id/detail_esgoto" style="@style/DetailValue" tools:text="Rede coletora"/>
+
+                <TextView style="@style/DetailLabel" android:text="Energia Elétrica:"/>
+                <TextView android:id="@+id/detail_energia" style="@style/DetailValue" tools:text="Sim"/>
+            </GridLayout>
+
+            <TextView style="@style/DetailSectionHeader" android:text="Famílias Cadastradas"/>
+            <TextView
+                android:id="@+id/text_no_families"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nenhuma família cadastrada."/>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddFamilia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_person"
+        app:tint="@android:color/white"
+        android:contentDescription="Adicionar Família" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

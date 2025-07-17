@@ -3,12 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/navigation_home">
+    app:startDestination="@id/logradouroListFragment">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/logradouroListFragment"
         android:name="com.dtech.acsapp.logradouro.LogradouroListFragment"
-        android:label="Logradouro"
-        tools:layout="@layout/fragment_logradouro_list" />
+        android:label="Logradouros"
+        tools:layout="@layout/fragment_logradouro_list" >
+        <action
+            android:id="@+id/action_logradouroListFragment_to_imovelListFragment"
+            app:destination="@id/imovelListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cidadaos"
+        android:name="com.dtech.acsapp.cidadao.CidadaoListFragment"
+        android:label="Cidadãos"
+        tools:layout="@layout/fragment_cidadao_list" />
+
+    <fragment
+        android:id="@+id/imovelListFragment"
+        android:name="com.dtech.acsapp.imovel.ImovelListFragment"
+        android:label="Imóveis"
+        tools:layout="@layout/fragment_imovel_list" >
+        <argument
+            android:name="logradouroId"
+            app:argType="integer" />
+        <argument
+            android:name="logradouroNome"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_imovelListFragment_to_imovelDetailFragment"
+            app:destination="@id/imovelDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imovelDetailFragment"
+        android:name="com.dtech.acsapp.imovel.ImovelDetailFragment"
+        android:label="Detalhes do Imóvel"
+        tools:layout="@layout/fragment_imovel_detail" >
+        <argument
+            android:name="imovelId"
+            app:argType="integer" />
+    </fragment>
+
+
 
 </navigation>
